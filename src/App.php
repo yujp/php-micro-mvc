@@ -15,8 +15,8 @@ final class App {
     public static function run(string $env, string $baseDir){
         //static::registerShutdownPage();
         try {
-            Config::load($env, $baseDir);
             Action::setDirectory($baseDir);
+            Config::load($env, $baseDir);
 
             //ClassLoader::register();
             ClassLoader::setNameSpaces([
